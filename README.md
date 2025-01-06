@@ -107,9 +107,9 @@ Test the API Endpoints using Postman
 
 
 
+
 ### **Challenges Encountered**
 
-### 1. **JWT Token Expiry**
 - During testing, tokens expired quickly especially when testing the `Chat` and `Token Balance` APIs. So, the `ACCESS_TOKEN_LIFETIME` in the settings was adjusted to 1 hour to provide a more convenient testing environment.
 - While testing in Postman, it was unclear how to properly pass the `Authorization` header with the Bearer token. Misconfigurations led to 401 Unauthorized errors.
 
