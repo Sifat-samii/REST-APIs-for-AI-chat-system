@@ -47,18 +47,19 @@ Test the API Endpoints using Postman
 1. User Registration
 - Endpoint: http://127.0.0.1:8000/api/register/
 - Method: POST
-- Input:
-   ```json
-   {
-       "username": "your_username",
-       "password": "your_password"
-   }
-- Output:
-   - Output:
+- Body: json
+   - Input:
       ```json
       {
-          "message": "User registered successfully"
+          "username": "your_username",
+          "password": "your_password"
       }
+   - Output:
+      - Output:
+         ```json
+         {
+             "message": "User registered successfully"
+         }
 
 2. User Login
 - Endpoint: http://127.0.0.1:8000/api/login/
