@@ -57,14 +57,7 @@ Test the API Endpoints using Postman
    - Output:
       ```json
       {
-          "refresh": "<refresh_token>",
-          "access": "<access_token>",
-          "user": {
-              "id": 1,
-              "username": "your_username",
-              "email": "",
-              "tokens": 4000
-          }
+          "message": "User registered successfully"
       }
 
 2. User Login
