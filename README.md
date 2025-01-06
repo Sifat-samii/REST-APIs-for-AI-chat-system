@@ -1,4 +1,4 @@
-# AI Chat System
+# AI Chat System APIs
 
 This repository contains a Django-based REST API for an AI-powered chat system. Users can register, log in, interact with a chatbot, and check their token balance. 
 
