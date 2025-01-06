@@ -24,5 +24,5 @@ This repository contains a Django-based REST API for an AI-powered chat system. 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/AI-Chat-System.git
+   git clone https://github.com/Sifat-samii/REST-APIs-for-AI-chat-system.git
    cd AI-Chat-System
