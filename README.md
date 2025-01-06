@@ -118,8 +118,6 @@ Test the API Endpoints using Postman
    }
 
 
-
-
 ### **Challenges Encountered**
 
 - During testing, tokens expired quickly especially when testing the `Chat` and `Token Balance` APIs. So, the `ACCESS_TOKEN_LIFETIME` in the settings was adjusted to 1 hour to provide a more convenient testing environment.
