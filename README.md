@@ -29,7 +29,7 @@ This repository contains a Django-based REST API for an AI-powered chat system. 
 2. Create and activate a virtual environment:
    ```bash
    python3 -m venv venv
-   venv\Scripts\activate
+   env\Scripts\activate
 3. Install the dependencies:
    ```bash
    pip install -r requirements.txt
@@ -45,7 +45,7 @@ This repository contains a Django-based REST API for an AI-powered chat system. 
 Test the API Endpoints using Postman
 
 1. User Registration
-- Endpoint: /api/register/
+- Endpoint: http://127.0.0.1:8000/api/register/
 - Method: POST
 - Input:
    ```json
@@ -54,51 +54,69 @@ Test the API Endpoints using Postman
        "password": "your_password"
    }
 - Output:
-   ```json
-   {
-       "message": "User registered successfully"
-   }
+   - Output:
+      ```json
+      {
+          "refresh": "<refresh_token>",
+          "access": "<access_token>",
+          "user": {
+              "id": 1,
+              "username": "your_username",
+              "email": "",
+              "tokens": 4000
+          }
+      }
 
 2. User Login
-- Endpoint: /api/login/
+- Endpoint: http://127.0.0.1:8000/api/login/
 - Method: POST
-- Input:
-   ```json
-   {
-       "username": "your_username",
-       "password": "your_password"
-   }
-- Output:
-   ```json
-   {
-       "access": "<access_token>",
-       "refresh": "<refresh_token>"
-   }
-
+- Body: json
+   - Input:
+      ```json
+      {
+          "username": "your_username",
+          "password": "your_password"
+      }
+   - Output:
+      ```json
+      {
+          "refresh": "<refresh_token>",
+          "access": "<access_token>",
+          "user": {
+              "id": 4,
+              "username": "your_username",
+              "email": "",
+              "tokens": 3900
+          }
+      }
 3. Chat with AI
-- Endpoint: /api/chat/
+- Endpoint: http://127.0.0.1:8000/api/chat/
 - Method: POST
 - Headers:
-- Authorization: Bearer <access_token>
-- Input:
-   ```json
-   {
-       "message": "Hello AI"
-   }
-- Output:
-   ```json
-   {
-       "user": 1,
-       "message": "Hello AI",
-       "response": "AI Response to: Hello AI",
-       "timestamp": "2025-01-06T12:34:56.789Z"
-   }
-
+   - Key: Authorization
+   - Value: Bearer <access_token> #copy the aceess token from user login
+- Body: json
+   - Input: 
+      ```json
+      {
+          "message": "Hello AI"
+      }
+   - Output:
+      ```json
+      {
+          "id": 8,
+          "user": 4,
+          "message": "Hello AI",
+          "response": "This is a dummy AI response.",
+          "timestamp": "2025-01-06T15:14:43.872619Z"
+      }
+      
 4. Token Balance
-- Endpoint: /api/tokens/
+- Endpoint: http://127.0.0.1:8000/api/tokens/
 - Method: GET
 - Headers:
-- Authorization: Bearer <access_token>
+   - Key: Authorization
+   - Value: Bearer <access_token> #copy the aceess token from user login
 - Output:
    ```json
    {
