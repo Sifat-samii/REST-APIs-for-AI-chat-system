@@ -42,7 +42,7 @@ This repository contains a Django-based REST API for an AI-powered chat system. 
 
 
 ### **Usage**
-Test the API Endpoints using Postman
+Test the API Endpoints using Postman. The usage guidelines along with input and output samples are given:
 
 1. User Registration
 - Endpoint: http://127.0.0.1:8000/api/register/
